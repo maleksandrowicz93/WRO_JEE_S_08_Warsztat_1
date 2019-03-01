@@ -15,7 +15,7 @@ Repozytorium z zadaniami warsztatowymi - moduł 01 - Podstawy Javy
 
 `Do uzupełnienia`
 
-####Przykład rozgrywki: 
+#### Przykład rozgrywki: 
 
 ``` text
 Do uzupełnienia
