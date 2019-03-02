@@ -19,13 +19,13 @@ public class GuessNumberApp {
         int checkedNumber = 0;
         int howManyTimes = 0;
         System.out.print("Let's play the game. Try to find a random number. Write value You want to check: ");
-//        while (!scanner.hasNextInt()) {
-//            System.out.print("It is not a number! Write a number, please: ");
-//            continue;
-//        }
+
         do {
+            while (!scanner.hasNextInt()) { //pętla której dotyczy problem
+                String userInput = scanner.next();
+                System.err.print(userInput + " is not a number! Write a number please: ");
+            }
             checkedNumber = scanner.nextInt();
-            String isNUmber = checkedNumber + "";
             howManyTimes++;
             if (checkedNumber > numberToGuess) {
                 System.out.print("Too many! Let's try again: ");
