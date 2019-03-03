@@ -16,14 +16,14 @@ public class GuessNumberApp {
     static void lookigForNumberByUser(int numberToGuess) {
 
         Scanner scanner = new Scanner(System.in);
-        int checkedNumber = 0;
+        int checkedNumber;
         int howManyTimes = 0;
-        System.out.print("Let's play the game. Try to find a random number. Write value You want to check: ");
+        System.out.print("Let's play the game. Try to find a random number. Range is <1, 100>. Write value You want to check: ");
 
         do {
-            while (!scanner.hasNextInt()) { //pętla której dotyczy problem
-                String userInput = scanner.next();
-                System.err.print(userInput + " is not a number! Write a number please: ");
+            while (!scanner.hasNextInt()) {
+                scanner.next();
+                System.err.print("It is not a number! Write a number please: ");
             }
             checkedNumber = scanner.nextInt();
             howManyTimes++;
