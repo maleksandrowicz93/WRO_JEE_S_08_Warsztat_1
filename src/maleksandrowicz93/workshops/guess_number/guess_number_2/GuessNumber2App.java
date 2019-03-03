@@ -16,12 +16,11 @@ public class GuessNumber2App {
         Scanner scanner = new Scanner(System.in);
         int min = 1;
         int max = 1000;
-        int count = 0;
+        int count = 1;
         do {
-            int number = (min + max)/2;
+            int number = (min + max) / 2;
             System.out.println("Czy ta liczba to " + number + "?");
             String userFeedback = scanner.next();
-            count++;
             if (userFeedback.equalsIgnoreCase("zgadłeś")) {
                 System.out.println("Brawo ja! Zgadłen w " + count + " próbach!");
                 break;
@@ -31,12 +30,13 @@ public class GuessNumber2App {
                 max = number;
             } else {
                 System.out.println("Nie rozumiem :(");
-                count--;
+                continue;
             }
+            count++;
             if (count > 10) {
                 System.err.println("Oszukujesz ;)");
+                break;
             }
         } while (true);
     }
-
 }
